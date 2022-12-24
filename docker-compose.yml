@@ -1,0 +1,15 @@
+# docker-compose.yml
+
+version: "3"
+
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - './:/usr/src/app'
+    ports:
+      - '4500:4500'
